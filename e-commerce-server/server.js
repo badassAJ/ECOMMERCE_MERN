@@ -19,7 +19,12 @@ connectDB();
 const app = express();
 
 
-app.use(cors());
+app.use(cors({
+  origin: "https://ecommerce-mern-aditya-jaiswals-projects-93273464.vercel.app", // your actual frontend URL
+  credentials: true
+}));
+
+
 app.use(express.json());
 app.use(morgan('dev'));
 

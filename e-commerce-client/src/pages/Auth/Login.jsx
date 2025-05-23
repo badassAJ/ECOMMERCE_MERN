@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import "../Auth/Register.css";
 import  toast from 'react-hot-toast';
-import axios from "axios";
+import axiosIns from '../../utils/axios'
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth";
 import { useCart } from "../../context/cart";
@@ -24,8 +24,8 @@ const [cart, setCart] = useCart();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
-        `${import.meta.env.VITE_API}/api/v1/auth/login`,
+      const res = await axiosIns.post(
+        `/api/v1/auth/login`,
         {  email, password,  }
       );
       if(res?.data?.success){
