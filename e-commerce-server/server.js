@@ -28,10 +28,7 @@ app.use('/api/v1/auth',authRoutes);
 app.use('/api/v1/category',categoryRoutes);
 app.use('/api/v1/product',productRoutes);
 
-app.use(cors({
-  origin: "https://ecommerce-mern-red.vercel.app/",
-  credentials: true,
-}));
+
 
 
 
