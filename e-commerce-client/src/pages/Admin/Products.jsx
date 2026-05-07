@@ -63,7 +63,7 @@ const Products = () => {
                   >
                     <div style={{ height: "200px", overflow: "hidden" }}>
                       <img
-                        src={`/api/v1/product/product-photo/${p._id}`}
+                        src={`${import.meta.env.VITE_API}/api/v1/product/product-photo/${p._id}`}
                         className="card-img-top"
                         alt={p.name}
                         style={{ objectFit: "contain", height: "100%" }}

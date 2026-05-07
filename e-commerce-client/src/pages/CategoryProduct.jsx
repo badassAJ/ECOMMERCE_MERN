@@ -47,7 +47,7 @@ const CategoryProduct = () => {
               <div key={p._id} className="card m-3 shadow-sm" style={{ width: "18rem", borderRadius: "12px" }}>
                 <div style={{ width: "100%", height: "200px", overflow: "hidden" }}>
                   <img
-                    src={`/api/v1/product/product-photo/${p._id}`}
+                    src={`${import.meta.env.VITE_API}/api/v1/product/product-photo/${p._id}`}
                     alt={p.name}
                     className="card-img-top"
                     style={{ width: "100%", height: "100%", objectFit: "contain" }}

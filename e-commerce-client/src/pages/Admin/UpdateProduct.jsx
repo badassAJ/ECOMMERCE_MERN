@@ -165,7 +165,7 @@ const UpdateProduct = () => {
                   id && (
                     <div className="text-center">
                       <img
-                        src={`/api/v1/product/product-photo/${id}`}
+                        src={`${import.meta.env.VITE_API}/api/v1/product/product-photo/${p._id}`}
                         alt="Product_photo"
                         height={"200px"}
                         className="img img-responsive"

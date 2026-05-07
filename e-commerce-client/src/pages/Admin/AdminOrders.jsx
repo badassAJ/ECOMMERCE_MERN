@@ -100,7 +100,7 @@ const AdminOrders = () => {
                     <div key={product._id || i} className="row mb-3">
                       <div className="col-md-4">
                         <img
-                          src={`/api/v1/product/product-photo/${product._id}`}
+                          src={`${import.meta.env.VITE_API}/api/v1/product/product-photo/${p._id}`}
                           alt={product.name}
                           className="img-fluid rounded"
                           style={{ height: "200px", objectFit: "contain" }}

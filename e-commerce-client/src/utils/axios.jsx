@@ -1,14 +1,28 @@
 // src/utils/axios.js
 import axios from "axios";
 
-const authData = JSON.parse(localStorage.getItem("auth"));
-const token = authData?.token;
+// const authData = JSON.parse(localStorage.getItem("auth"));
+// const token = authData?.token;
 
+// const instance = axios.create({
+//   baseURL: import.meta.env.VITE_API,
+//   headers: {
+//     Authorization: token ? `${token}` : "",
+//   },
+// });
+
+// export default instance;
+// Updated src/utils/axios.jsx
 const instance = axios.create({
   baseURL: import.meta.env.VITE_API,
-  headers: {
-    Authorization: token ? `${token}` : "",
-  },
+});
+
+instance.interceptors.request.use((config) => {
+  const authData = JSON.parse(localStorage.getItem("auth"));
+  if (authData?.token) {
+    config.headers.Authorization = authData.token;
+  }
+  return config;
 });
 
 export default instance;

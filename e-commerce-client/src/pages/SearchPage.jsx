@@ -34,7 +34,7 @@ const SearchPage = () => {
                   style={{ width: "100%", height: "200px", overflow: "hidden" }}
                 >
                   <img
-                    src={`/api/v1/product/product-photo/${p._id}`}
+                    src={`${import.meta.env.VITE_API}/api/v1/product/product-photo/${p._id}`}
                     alt={p.name}
                     className="card-img-top"
                     style={{

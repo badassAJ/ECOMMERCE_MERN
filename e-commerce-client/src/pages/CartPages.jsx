@@ -117,7 +117,7 @@ const CartPages = () => {
                 <div className="row g-0 align-items-center">
                   <div className="col-md-4">
                     <img
-                      src={`/api/v1/product/product-photo/${p._id}`}
+                      src={`${import.meta.env.VITE_API}/api/v1/product/product-photo/${p._id}`}
                       alt={p.name}
                       className="img-fluid rounded-start"
                       style={{ height: "200px", objectFit: "cover" }}

@@ -61,7 +61,7 @@ const ProductDetails = () => {
           >
             {product._id && (
               <img
-                src={`/api/v1/product/product-photo/${product._id}`}
+                src={`${import.meta.env.VITE_API}/api/v1/product/product-photo/${product._id}`}
                 className="img-fluid"
                 alt={product.name}
                 style={{
@@ -136,7 +136,7 @@ const ProductDetails = () => {
                 style={{ width: "100%", height: "200px", overflow: "hidden" }}
               >
                 <img
-                  src={`/api/v1/product/product-photo/${p._id}`}
+                  src={`${import.meta.env.VITE_API}/api/v1/product/product-photo/${p._id}`}
                   alt={p.name}
                   className="card-img-top"
                   style={{
