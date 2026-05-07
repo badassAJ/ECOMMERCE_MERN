@@ -20,7 +20,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: "https://ecommerce-mern-red.vercel.app/",
+  origin: "https://ecommerce-mern-red.vercel.app",
   credentials: true
 }));
 app.use(express.json());
