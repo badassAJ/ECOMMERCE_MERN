@@ -34,7 +34,12 @@ app.use('/api/v1/product',productRoutes);
 
 
 
-
+app.get('/health', (req, res) => {
+ res.status(200).json({
+ status: 'ok',
+ message: 'Server is running',
+ });
+ });
 
 
 
